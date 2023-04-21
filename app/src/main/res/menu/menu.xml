@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:icon="@drawable/ic_florist"
+        android:title="Wszystkie"
+        android:id="@+id/flowersFirstFragment"/>
+    <item
+        android:icon="@drawable/ic_water"
+        android:title="Podlewanie"
+        android:id="@+id/waterFragment"/>
+    <item
+        android:icon="@drawable/sprinkle"
+        android:title="Spryskiwanie"
+        android:id="@+id/sprinkleFragment"/>
+    <item
+        android:icon="@drawable/ic_fertilize"
+        android:title="Nawożenie"
+        android:id="@+id/fertilizeFragment"/>
+</menu>

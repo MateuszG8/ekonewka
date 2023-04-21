@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/flowersFirstFragment">
+
+    <fragment
+        android:id="@+id/flowersFirstFragment"
+        android:name="com.example.ekonewka.ui.flowersFirstFragment.FlowersFirstFragment"
+        android:label="fragment_flowers_first"
+        tools:layout="@layout/fragment_flowers_first" />
+    <fragment
+        android:id="@+id/addFlower"
+        android:name="com.example.ekonewka.ui.add.AddFlower"
+        android:label="fragment_add_flower"
+        tools:layout="@layout/fragment_add_flower" />
+    <fragment
+        android:id="@+id/editFlower"
+        android:name="com.example.ekonewka.ui.edit.EditFlower"
+        android:label="fragment_edit_flower"
+        tools:layout="@layout/fragment_edit_flower" />
+    <fragment
+        android:id="@+id/fertilizeFragment"
+        android:name="com.example.ekonewka.ui.fertilize.FertilizeFragment"
+        android:label="fragment_fertilize"
+        tools:layout="@layout/fragment_fertilize" />
+    <fragment
+        android:id="@+id/sprinkleFragment"
+        android:name="com.example.ekonewka.ui.sprinkle.SprinkleFragment"
+        android:label="fragment_sprinkle"
+        tools:layout="@layout/fragment_sprinkle" />
+    <fragment
+        android:id="@+id/waterFragment"
+        android:name="com.example.ekonewka.ui.water.WaterFragment"
+        android:label="fragment_water"
+        tools:layout="@layout/fragment_water" />
+</navigation>

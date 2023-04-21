@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.add.AddFlower">
+
+    <ImageView
+        android:clickable="true"
+        android:id="@+id/backIV"
+        android:layout_width="50dp"
+        android:layout_marginTop="3dp"
+        android:layout_height="53dp"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dodaj roślinę"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        app:layout_constraintStart_toEndOf="@+id/backIV"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/flowerPC"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/ic_flower"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/nameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Nazwa"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flowerPC" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Dodaj nazwe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameTv"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <CheckBox
+        android:id="@+id/waterCB"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <TextView
+        android:id="@+id/waterTW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Podlewanie"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/waterCB"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <TextView
+        android:id="@+id/lastWaterDateTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Ostatnie podlewanie: "
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/waterTW" />
+
+    <TextView
+        android:id="@+id/lastWaterDatePH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="01-01-2000"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/lastWaterDateTV"
+        app:layout_constraintTop_toBottomOf="@+id/waterTW" />
+
+    <TextView
+        android:id="@+id/waterTimeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Czestotliowsc podelwania: co"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lastWaterDateTV" />
+
+    <EditText
+        android:id="@+id/waterET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:digits="0123456789"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/waterTimeTV"
+        app:layout_constraintTop_toBottomOf="@+id/lastWaterDateTV" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="dni"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/waterET"
+        app:layout_constraintTop_toBottomOf="@+id/lastWaterDateTV" />
+
+    <CheckBox
+        android:id="@+id/sprinkleCB"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/waterTimeTV" />
+
+    <TextView
+        android:id="@+id/sprinkleTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Spryskiwanie"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/sprinkleCB"
+        app:layout_constraintTop_toBottomOf="@+id/waterTimeTV" />
+
+    <TextView
+        android:id="@+id/lastSprinkleDateTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Ostatnie spryskiwanie: "
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sprinkleTV" />
+
+    <TextView
+        android:id="@+id/lastSprinkledatePH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="01-01-2000"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/lastSprinkleDateTV"
+        app:layout_constraintTop_toBottomOf="@+id/sprinkleTV" />
+
+    <TextView
+        android:id="@+id/sprinkleTimeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Czestotliowsc spryskiwania: co"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lastSprinkleDateTV" />
+
+    <EditText
+        android:id="@+id/sprinkleET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:digits="0123456789"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/sprinkleTimeTV"
+        app:layout_constraintTop_toBottomOf="@+id/lastSprinkleDateTV" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="dni"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/sprinkleET"
+        app:layout_constraintTop_toBottomOf="@+id/lastSprinkleDateTV" />
+
+    <CheckBox
+        android:id="@+id/fertilizeCB"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sprinkleTimeTV" />
+
+    <TextView
+        android:id="@+id/fertilizeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Nawożenie"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/fertilizeCB"
+        app:layout_constraintTop_toBottomOf="@+id/sprinkleTimeTV" />
+
+    <TextView
+        android:id="@+id/lastFertilizeDateTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Ostatnie spryskiwanie: "
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fertilizeTV" />
+
+    <TextView
+        android:id="@+id/lastFertilizeDatePH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="01-01-2000"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/lastFertilizeDateTV"
+        app:layout_constraintTop_toBottomOf="@+id/fertilizeTV" />
+
+    <TextView
+        android:id="@+id/fertilizeTimeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Czestotliowsc spryskiwania: co"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lastFertilizeDateTV" />
+
+    <EditText
+        android:id="@+id/fertilizeET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:digits="0123456789"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/fertilizeTimeTV"
+        app:layout_constraintTop_toBottomOf="@+id/lastFertilizeDateTV" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="dni"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/fertilizeET"
+        app:layout_constraintTop_toBottomOf="@+id/lastFertilizeDateTV" />
+
+    <Button
+        android:id="@+id/saveBT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="30dp"
+        android:text="Dodaj"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fertilizeTimeTV" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
